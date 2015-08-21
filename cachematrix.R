@@ -18,9 +18,11 @@ creatematrix <- function (min, max, size) {
 makecachematrix <- function(x = matrix()) {
     
     # Some basic error handling
-    if(class(try(solve(x), silent=T))=="try-error") {
-    return(message('Matrix must be square and numeric'))
-    }
+    if(class(try(solve(x), silent=T))=="try-error") return(message('Matrix must have an inverse'))
+    
+    if (sum(is.na(x))>0) return(message('Matrix must not contain NA&NaN'))
+    # End of error rutine
+    
     
     inversa <- NULL
   
