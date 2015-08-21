@@ -1,3 +1,3 @@
 ### R - Exercise 2
 
-In addition to methods of the example, you can use $checkinverse() to check your calculations
+Second programming assignment of the R course of Coursera
