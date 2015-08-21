@@ -1,6 +1,6 @@
 # Functions provided;
 # creatematrix; Creates a square matrix;
-# makeCacheMatrix; Special function with te following methods:
+# makeCacheMatrix; Special function with the following methods:
     # set, Set value of matrix;
     # get, Get value of matrix;
     # setinverse, Set value of inverse;
