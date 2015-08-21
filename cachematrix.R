@@ -16,6 +16,12 @@ creatematrix <- function (min, max, size) {
 }
 
 makeCacheMatrix <- function(x = matrix()) {
+    
+    # Some basic error handling
+    if(class(try(solve(x), silent=T))=="try-error") {
+    return(message('Matrix must be square and numeric'))
+    }
+    
     inversa <- NULL
   
     set <- function(y) {
