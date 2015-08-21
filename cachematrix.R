@@ -1,21 +1,21 @@
 # Functions provided;
 # creatematrix; Creates a square matrix;
-# makeCacheMatrix; Special function with the following methods:
+# makecachematrix; Special function with the following methods:
     # set, Set value of matrix;
     # get, Get value of matrix;
     # setinverse, Set value of inverse;
     # getinverse, Get value of inverse;
     # checkinverse, Check if inverse is correct;
-# cacheSolve; Returns cached inverse of matrix, if does not exist, then calculates it
+# cachesolve; Returns cached inverse of matrix, if does not exist, then calculates it
 
 creatematrix <- function (min, max, size) {
     # Function that creates a square matrix
     # between min and max with size row and size columns
-    valor=as.integer(runif(size^2, min, max))
+    valor=as.integer(runif(size^2, min, max+1))
     matrix(valor, nrow=size, ncol=size)
 }
 
-makeCacheMatrix <- function(x = matrix()) {
+makecachematrix <- function(x = matrix()) {
     
     # Some basic error handling
     if(class(try(solve(x), silent=T))=="try-error") {
@@ -48,7 +48,7 @@ makeCacheMatrix <- function(x = matrix()) {
        
 }
 
-cacheSolve <- function(x, ...) {
+cachesolve <- function(x, ...) {
     ## Return a matrix that is the inverse of 'x'
     inversa <- x$getinverse()
     if(!is.null(inversa)) {
