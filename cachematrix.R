@@ -31,10 +31,10 @@ makeCacheMatrix <- function(x = matrix()) {
   
     checkinverse <- function() {
         if (identical(inversa,solve(x))) {
-            print("Correct!")
+            message("Correct!")
         }
         else {
-            print("Incorrect, check your result")
+            message("Incorrect, check your data")
         }
     }
   
